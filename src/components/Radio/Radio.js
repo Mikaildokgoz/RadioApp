@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { useEffect } from "react";
 import Channels from "../Channel/Channels";
 
 import "./Radio.scss";
 
 export default function Radio() {
-  const [radio, setRadio] = useState([1, 2, 3, 4]);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const radio = [1, 2, 3, 4];
+  const isPlaying = false;
 
   // import getRequest func and fetch radio data
 
