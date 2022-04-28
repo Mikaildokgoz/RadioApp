@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "./Channel.scss";
 
 const Channels = () => {
+  
+  const [showImage, setShowImage] = useState(false);
+  console.log(setShowImage);
 
   const withImage = () => {
     return (
