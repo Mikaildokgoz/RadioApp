@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Channel.scss";
 
-const Channels = () => {
+const Channels = ({channel, setIsPlaying}) => {
   const [showImage, setShowImage] = useState(false);
 
   const withImage = () => {
     return (
       <div className="channel_wrapper_image">
         <div className="image_wrapper">
-          <img className="radio_image" src={null} alt="" />
+          <img className="radio_image" src={channel?.imag} alt="" />
         </div>
         <div className="channel_wrapper">
-          <span>{null}</span> {/*channel name*/}
-          <span>{null}</span> {/*channel frequency*/}
+          <span>{channel?.name}</span> {/*channel name*/}
+          <span>{channel?.frequency}</span> {/*channel frequency*/}
         </div>
       </div>
     );
@@ -20,8 +20,8 @@ const Channels = () => {
   const withoutImage = () => {
     return (
       <div className="channel_wrapper">
-        <span>{null}</span> {/*channel name*/}
-        <span>{null}</span> {/*channel frequency*/}
+        <span>{channel?.name}</span> {/*channel name*/}
+        <span>{channel?.name}</span> {/*channel frequency*/}
       </div>
     );
   };

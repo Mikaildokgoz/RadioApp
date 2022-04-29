@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
+import { getRequest } from "../../utils/HttpRequest";
 import Channels from "../Channel/Channels";
 
 import "./Radio.scss";
@@ -8,6 +9,11 @@ export default function Radio() {
   const [radio, setRadio] = useState([1, 2, 3, 4]);
   const [isPlaying, setIsPlaying] = useState(false);
 
+ useEffect(() => {
+  getRequest(setRadio);
+  console.log(radio);
+ }, [])
+ 
   // import getRequest func and fetch radio data
 
   const footer = (isPlaying) => {
@@ -30,7 +36,7 @@ export default function Radio() {
       <section className="channel_list">
         {/* map Channel comp. with radio data */}
         {radio?.map((channel, index) => {
-          return <Channels key={index} />;
+          return <Channels channel = {channel} setIsPlaying={setIsPlaying} key={index} />;
         })}
       </section>
       <footer>{footer(isPlaying)}</footer>
