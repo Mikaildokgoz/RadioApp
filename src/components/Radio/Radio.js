@@ -1,13 +1,17 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { getRequest } from "../../utils/HttpRequest";
+=======
+import React from "react";
+>>>>>>> 89497e65d25d82b9f46008935f197c9c413a676f
 import Channels from "../Channel/Channels";
 
 import "./Radio.scss";
 
 export default function Radio() {
-  const [radio, setRadio] = useState([1, 2, 3, 4]);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const radio = [1, 2, 3, 4];
+  const isPlaying = false;
 
  useEffect(() => {
   getRequest(setRadio);

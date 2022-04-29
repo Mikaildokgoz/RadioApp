@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import "./Channel.scss";
 
+<<<<<<< HEAD
 const Channels = ({channel, setIsPlaying}) => {
+=======
+const Channels = () => {
+  
+>>>>>>> 89497e65d25d82b9f46008935f197c9c413a676f
   const [showImage, setShowImage] = useState(false);
+  console.log(setShowImage);
 
   const withImage = () => {
     return (
